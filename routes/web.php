@@ -11,12 +11,19 @@
 |
 */
 
+// Route::get('/', function () {
+//     return view('auth.login');
+// });
+// Route::get('/home', function () {
+//     return view('welcome');
+// })->middleware('auth');
+// Auth::routes();
+
 Route::get('/', function () {
-    return view('auth.login');
+     return view('welcome');
 });
-Route::get('/home', function () {
-    return view('welcome');
-})->middleware('auth');
-Auth::routes();
+Route::get('/regist', function () {
+    return view('regist');
+});
 
 // Route::get('/home', 'HomeController@index')->name('home');
