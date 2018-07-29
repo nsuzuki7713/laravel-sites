@@ -19,11 +19,10 @@
 // })->middleware('auth');
 // Auth::routes();
 
-Route::get('/', function () {
-     return view('welcome');
-});
-Route::get('/regist', function () {
-    return view('regist');
-});
+Route::get('/', 'HomeController@index');
+Route::get('/regist', 'RegistIdeaController@index');
+Route::post('/regist', 'RegistIdeaController@post');
+Route::get('/detail/{id}', 'DetailController@index');
+Route::post('/detail/{id}', 'DetailController@post');
 
 // Route::get('/home', 'HomeController@index')->name('home');

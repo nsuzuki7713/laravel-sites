@@ -10,50 +10,41 @@
 <body>
 <header data-block-type="headers" data-id="4">
     <div class="container">
-            <nav class="navbar">
-                <a href="https://www.froala.com">
-                <img src="https://editor-latest.s3.amazonaws.com/design-blocks/block_images/img_logo.png" height="30" alt="image">
-            </a>
-    </nav>
+        <nav class="navbar">
+            <a href="/"><button class="btn" type="button">HOME</button></a>
+        </nav>
     </div>
 </header>
-<section class="fdb-block" data-block-type="contents" data-id="1" draggable="true">
+<section class="fdb-block" style="padding-bottom:0px" data-block-type="contents" data-id="1" draggable="true">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-12 col-md-6 col-lg-5">
-                <h1>Design Blocks</h1>
-                <p class="text-h3">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                <h1>アイデア共有</h1>
+                <p class="text-h3">
+                ジェームス･Ｗ･ヤング（米最大広告代理店･最高顧問）は、「アイデアとは既存の要素の新しい組み合わせ以外の何ものでもない」と明言しています。
+                つまり、アイデアの元となる素材はすでに世の中に存在していて、重要なことは、それらの新たな組み合わせを“見出すこと”なのです。
+                </p>
+                <a href="/regist"><button type="button" class="btn btn-primary">アイデア投稿</button></a>
             </div>
             <div class="col-12 col-md-6 ml-md-auto mt-4 mt-md-0">
-                <img alt="image" class="img-fluid" src="https://editor-latest.s3.amazonaws.com/design-blocks/block_images/colors_wide_1.jpg">
+                <img alt="image" class="img-fluid" src="/image/business_idea_share.png">
             </div>
         </div>
     </div>
 </section>
-<section class="fdb-block" data-block-type="features" data-id="2" draggable="true">
+<section class="fdb-block" style="padding:20px 40px" data-block-type="features" data-id="2" draggable="true">
     <div class="container">
         <div class="row text-left">
+            @foreach($items as $item)
             <div class="col-12 col-md-8 m-auto col-lg-4">
                 <div class="fdb-box fdb-touch">
-                    <h2>Feature 1</h2>
-                    <p>Far far away, behind the word mountains, far from the country Vokalia, there live the blind texts.</p>
-                    <p><a href="https://www.froala.com">Read more</a></p>
+                    <h2>{{$item->item1}} ✕ {{$item->item2}}</h2>
+                    <p>{{$item->title}}</p>
+                    <p>{{$item->detail}}</p>
+                    <div><a href="/detail/{{$item->id}}">Read more</a></div>
                 </div>
             </div>
-            <div class="col-12 col-md-8 m-auto col-lg-4 pt-5 pt-lg-0">
-                <div class="fdb-box fdb-touch">
-                    <h2>Feature 2</h2>
-                    <p>Separated they live in Bookmarks right at the coast of the Semantics, a large language ocean.</p>
-                    <p><a href="https://www.froala.com">Read more</a></p>
-                </div>
-            </div>
-            <div class="col-12 col-md-8 m-auto col-lg-4 pt-5 pt-lg-0">
-                <div class="fdb-box fdb-touch">
-                    <h2>Feature 3</h2>
-                    <p>A small river named Duden flows by their small place and supplies it with the necessary regelialia.</p>
-                    <p><a href="https://www.froala.com">Read more</a></p>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
@@ -61,7 +52,7 @@
     <div class="container">
         <div class="row text-center align-items-center">
             <div class="col-12 col-sm-6 col-md-4 text-sm-left">
-                <img alt="image" src="https://editor-latest.s3.amazonaws.com/design-blocks/block_images/img_logo.png" height="40">
+                <!-- <img alt="image" src="https://editor-latest.s3.amazonaws.com/design-blocks/block_images/img_logo.png" height="40"> -->
             </div>
 
             <div class="col-12 col-sm-6 col-md-4 mt-4 mt-sm-0 text-center text-sm-right text-md-center">
